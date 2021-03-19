@@ -7,7 +7,7 @@ public class GamePanel extends JPanel implements ActionListener{
 
     static final int SCREEN_WIDTH = 1300;
     static final int SCREEN_HEIGHT = 750;
-    static final int UNIT_SIZE = 50;
+    static final int UNIT_SIZE = 30;
     static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT)/(UNIT_SIZE*UNIT_SIZE);
     static final int DELAY = 175;
     final int x[] = new int[GAME_UNITS];
@@ -58,7 +58,7 @@ public class GamePanel extends JPanel implements ActionListener{
             }
             //Wyświetlanie wyniku podczas gry
             g.setColor(Color.white);
-            g.setFont( new Font("Ink Free",Font.BOLD, 60));
+            g.setFont( new Font("Bradley Hand ITC",Font.BOLD, 40));
             FontMetrics metrics = getFontMetrics(g.getFont());
             g.drawString("Wynik: "+applesEaten, (SCREEN_WIDTH - metrics.stringWidth("Wynik: "+applesEaten))/2, g.getFont().getSize());
         }
@@ -127,12 +127,12 @@ public class GamePanel extends JPanel implements ActionListener{
     public void gameOver(Graphics g) {
         //Wynik
         g.setColor(Color.red);
-        g.setFont( new Font("Ink Free",Font.BOLD, 60));
+        g.setFont( new Font("Chiller",Font.BOLD, 40));
         FontMetrics metrics1 = getFontMetrics(g.getFont());
         g.drawString("Wynik: "+applesEaten, (SCREEN_WIDTH - metrics1.stringWidth("Wynik: "+applesEaten))/2, g.getFont().getSize());
         //Koniec Gry
         g.setColor(Color.red);
-        g.setFont( new Font("Ink Free",Font.BOLD, 75));
+        g.setFont( new Font("Chiller",Font.BOLD, 90));
         FontMetrics metrics2 = getFontMetrics(g.getFont());
         g.drawString("Przegrales :(", (SCREEN_WIDTH - metrics2.stringWidth("Przegrales :("))/2, SCREEN_HEIGHT/2);
     }

@@ -1,12 +1,12 @@
 
 import javax.swing.JFrame;
 
-public class GameFrame extends JFrame{
+public class Inne extends JFrame{
 
-    GameFrame(){
+    Inne(){
 
-        this.add(new GamePanel());
-        this.setTitle("Snake");
+        this.add(new Kod());
+        this.setTitle("Wąż Rzeczny (niebezpieczny)");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
         this.pack();

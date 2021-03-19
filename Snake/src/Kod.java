@@ -3,16 +3,16 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.Random;
 
-public class GamePanel extends JPanel implements ActionListener{
+public class Kod extends JPanel implements ActionListener{
 
-    static final int SCREEN_WIDTH = 1300;
-    static final int SCREEN_HEIGHT = 750;
-    static final int UNIT_SIZE = 30;
+    static final int SCREEN_WIDTH = 1300; //Parametry okna
+    static final int SCREEN_HEIGHT = 750; //Prametry okna
+    static final int UNIT_SIZE = 30; //Wielkosć pól
     static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT)/(UNIT_SIZE*UNIT_SIZE);
-    static final int DELAY = 175;
+    static final int DELAY = 150; //prędkość wężą
     final int x[] = new int[GAME_UNITS];
     final int y[] = new int[GAME_UNITS];
-    int bodyParts = 3;
+    int bodyParts = 3; //wielkość wężą
     int applesEaten;
     int appleX;
     int appleY;
@@ -21,7 +21,7 @@ public class GamePanel extends JPanel implements ActionListener{
     Timer timer;
     Random random;
 
-    GamePanel(){
+    Kod(){
         random = new Random();
         this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT));
         this.setBackground(Color.black);
